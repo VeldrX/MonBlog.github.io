@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Accueil – Mon Blog de Stage</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -17,14 +18,38 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Articles récents</h2>
-        <section id="articles-list" class="articles"></section>
+    <main class="two-columns">
+        <!-- Section articles -->
+        <section class="articles" id="articles-list">
+            <h2>Articles récents</h2>
+            <!-- Les articles seront injectés ici via JS -->
+        </section>
+
+        <!-- Section latérale info -->
+        <aside class="sidebar">
+            <!-- Bloc À propos -->
+            <div class="sidebar-block">
+                <h3>👤 À propos de moi</h3>
+                <p><strong>Mathis Vassy</strong><br>Étudiant à YNOV Lyon</p>
+                <p>Passionné par le développement, la DATA et l’IA.</p>
+                <a href="about.html" class="btn-sidebar">En savoir plus</a>
+            </div>
+
+            <hr class="sidebar-divider">
+
+            <!-- Bloc Contact -->
+            <div class="sidebar-block">
+                <h3>📬 Me contacter</h3>
+                <p>Email :<br><a href="mailto:mathisvassypro@gmail.com" class="email-link">mathisvassypro@gmail.com</a>
+                </p>
+                <a href="contact.html" class="btn-sidebar">Page contact</a>
+            </div>
+        </aside>
+
     </main>
 
-
     <footer>
-        <p>&copy; 2025 – Ton Nom</p>
+        <p>&copy; 2025 – Vassy – Blog de Stage</p>
     </footer>
 
     <script src="assets/js/home.js"></script>
