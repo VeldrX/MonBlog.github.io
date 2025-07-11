@@ -225,3 +225,45 @@ footer {
 .fallback-contact a:hover {
     color: #2563eb;
 }
+
+.article-layout {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.article-main {
+    flex: 3;
+}
+
+.article-sidebar {
+    flex: 1;
+    background-color: #1e293b;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    color: #f1f5f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-self: flex-start;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.company-card p {
+    margin: 0.5rem 0;
+}
+
+.btn-sidebar {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-sidebar:hover {
+    background-color: #2563eb;
+}

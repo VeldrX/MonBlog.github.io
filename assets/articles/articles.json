@@ -1,0 +1,16 @@
+[
+    {
+        "id": "laps",
+        "title": "Mise en place de Windows LAPS",
+        "date": "2025-07-01",
+        "summary": "Déploiement d'une solution sécurisée pour les mots de passe administrateurs locaux.",
+        "file": "articleLAPS.html"
+    },
+    {
+        "id": "semaine2",
+        "title": "Semaine 2 – Début des missions",
+        "date": "2025-07-08",
+        "summary": "J’ai commencé à coder !",
+        "file": "articleSemaine2.html"
+    }
+]

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Titre de l’article – Mon Blog</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mon Blog de Stage</h1>
+        <nav>
+            <a href="/index.html">Accueil</a>
+            <a href="/about.html">À propos</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="article-layout">
+        <!-- Colonne principale -->
+        <section class="article-main">
+            <h1>Mise en place de Windows LAPS</h1>
+            <p class="article-date">Mission effectuée </p>
+            <section>
+                <h2>Contexte</h2>
+                <p>Grace a un outil d'analyse de sécurité de système informatique. L'entreprise a détecté l'absence de
+                    LAPS
+                    comme un point critique. Durant mon stage, j'ai
+                    été
+                    chargé de mettre en place LAPS, une solution Microsoft permettant de sécuriser les mots de passe des
+                    comptes administrateur locaux.</p>
+                <p>Cette tâche a nécessité plusieurs jours de travail : étude de la solution, tests, déploiement,
+                    rédaction
+                    de documentation et suivi.</p>
+            </section>
+            <section>
+                <h2>Objectif</h2>
+                <p>Avant LAPS, un mot de passe identique était utilisé pour tous les comptes administrateur locaux, ce
+                    qui
+                    représentait un risque en cas de compromission. LAPS permet de générer un mot de passe
+                    <strong>unique,
+                        chiffré et renouvelé automatiquement</strong> pour chaque machine, stocké de manière sécurisée
+                    dans
+                    <strong>Active Directory</strong>.
+                </p>
+            </section>
+            <section>
+
+                <h2>Méthodologie</h2>
+                <ul>
+                    <li>Étude de la solution LAPS</li>
+                    <li>Vérification de la compatibilité des machines</li>
+                    <li>Rédaction d’un runbook et d’une documentation</li>
+                    <li>Installation de LAPS sur le contrôleur de domaine</li>
+                    <li>Déploiement via GPO</li>
+                    <li>Tests sur machines compatibles et incompatibles</li>
+                    <li>Déploiement complet dans l’environnement de production</li>
+                </ul>
+            </section>
+            <section>
+
+                <h2>Outils et compétences mobilisés</h2>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Active Directory</li>
+                    <li>PowerShell</li>
+                    <li>GPMC (console de gestion des GPO)</li>
+                </ul>
+
+                <h3>Compétences techniques</h3>
+                <ul>
+                    <li>Gestion d’Active Directory</li>
+                    <li>Déploiement de GPO</li>
+                    <li>Sécurisation des accès administratifs</li>
+                    <li>Analyse de logs (Event Viewer)</li>
+                </ul>
+
+                <h3>Compétences transversales</h3>
+                <ul>
+                    <li>Esprit d’analyse</li>
+                    <li>Autonomie dans la recherche</li>
+                    <li>Capacité à rédiger des documents techniques</li>
+                </ul>
+            </section>
+            <section>
+
+                <h2>Problèmes rencontrés</h2>
+                <p><strong>Incompatibilité avec certaines machines :</strong> des postes étaient sous une version de
+                    Windows
+                    non compatible avec Windows LAPS (mise à jour du 11 avril 2023 requise). J’ai donc dressé une liste
+                    des machines compatibles et non compatibles afin que mon maître de stage puisse décider de la suite
+                    à donner (migration, exclusion du déploiement, ...).</p>
+            </section>
+            <section>
+
+                <h2>Ce que j’ai appris</h2>
+                <p>Ce projet m’a permis de mieux comprendre le fonctionnement d’un domaine Active Directory, la gestion
+                    des
+                    comptes locaux, les GPO, et la cybersécurité appliquée. J’ai aussi appris à présenter un projet à
+                    une
+                    équipe technique et à documenter une solution de manière professionnelle.</p>
+            </section>
+            <section>
+
+                <h2>À propos de LAPS</h2>
+                <p>LAPS est une technologie développée par Microsoft pour améliorer la sécurité des comptes
+                    administrateurs
+                    locaux. Il existe deux versions : <strong>LAPS Legacy</strong> (ancienne version) et <strong>Windows
+                        LAPS</strong> (intégré aux mises à jour récentes). Elle permet une gestion centralisée,
+                    sécurisée et
+                    automatisée des mots de passe locaux.</p>
+
+                <p>Grâce à cette mission, j’ai non seulement renforcé mes compétences techniques mais également gagné en
+                    autonomie, en rigueur et en compréhension des enjeux de sécurité en entreprise.</p>
+            </section>
+
+
+        </section>
+
+        <!-- Colonne secondaire -->
+        <aside class="article-sidebar">
+            <div class="company-card">
+                <h2>L’entreprise</h2>
+                <p><strong>Nom :</strong> test</p>
+                <p><strong>Localisation :</strong> S</p>
+                <p><strong>Secteur :</strong> Cybersécurité / Réseaux</p>
+                <p><strong>Taille :</strong> ?</p>
+                <a href="entreprise.html" class="btn-sidebar">Voir plus →</a>
+            </div>
+        </aside>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 – Mathis Vassy – Blog de Stage</p>
+    </footer>
+
+</body>
+
+</html>
