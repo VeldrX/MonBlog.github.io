@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Titre de l’article – Mon Blog</title>
+    <title>Déploiement de Windows LAPS – Mon Blog de Stage</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -14,7 +14,7 @@
         <nav>
             <a href="../../index.html">Accueil</a>
             <a href="../../about.html">À propos</a>
-            <a href="../..s/contact.html">Contact</a>
+            <a href="../../contact.html">Contact</a>
         </nav>
     </header>
 
@@ -22,116 +22,238 @@
         <!-- Colonne principale -->
         <section class="article-main">
             <h1>Mise en place de Windows LAPS</h1>
-            <p class="article-date">Mission effectuée </p>
-            <section>
-                <h2>Contexte</h2>
-                <p>Grace a un outil d'analyse de sécurité de système informatique. L'entreprise a détecté l'absence de
-                    LAPS
-                    comme un point critique. Durant mon stage, j'ai
-                    été
-                    chargé de mettre en place LAPS, une solution Microsoft permettant de sécuriser les mots de passe des
-                    comptes administrateur locaux.</p>
-                <p>Cette tâche a nécessité plusieurs jours de travail : étude de la solution, tests, déploiement,
-                    rédaction
-                    de documentation et suivi.</p>
-            </section>
-            <section>
-                <h2>Objectif</h2>
-                <p>Avant LAPS, un mot de passe identique était utilisé pour tous les comptes administrateur locaux, ce
-                    qui
-                    représentait un risque en cas de compromission. LAPS permet de générer un mot de passe
-                    <strong>unique,
-                        chiffré et renouvelé automatiquement</strong> pour chaque machine, stocké de manière sécurisée
-                    dans
-                    <strong>Active Directory</strong>.
-                </p>
-            </section>
-            <section>
+            <p class="article-date">Mission effectuée – Année 2025</p>
 
+            <section>
+                <h2>Présentation du projet</h2>
+                <p>Dans un environnement professionnel, la sécurité des comptes administrateurs locaux est cruciale.
+                    L’utilisation de mots de passe identiques sur plusieurs machines augmente les risques de
+                    compromission
+                    en cas de fuite ou d’attaque.</p>
+                <p>C'est pour cela que ,lors de mon stage , j'ai été chargé de mettre en place une solution choisis par
+                    l'entreprise pour réduire ces même risque.</p>
+                <p>J’ai donc été chargé de mettre en place <strong>Windows LAPS</strong>, une
+                    solution Microsoft qui permet d’attribuer à chaque machine un mot de passe administrateur local
+                    unique, chiffré, stocké dans Active Directory, et renouvelé automatiquement.</p>
+                <p>Cette mission m’a permis de mener un projet complet : étude technique, tests, documentation,
+                    déploiement, suivi et présentation finale.</p>
+            </section>
+
+            <section>
+                <h2>Fonctionnement de Windows LAPS</h2>
+                <p><strong>Windows LAPS</strong> est une évolution de <strong>LAPS Legacy</strong>, directement
+                    intégrée
+                    aux versions récentes de Windows (post avril 2023). Il permet de :</p>
+                <ul>
+                    <li>Générer un mot de passe aléatoire et sécurisé pour le compte administrateur local</li>
+                    <li>Stocker ce mot de passe chiffré dans un attribut d’Active Directory</li>
+                    <li>Renouveler ce mot de passe à intervalles réguliers</li>
+                    <li>Le rendre accessible uniquement à certains groupes (administrateurs, techniciens, etc.)
+                    </li>
+                </ul>
+
+
+            </section>
+
+            <section>
                 <h2>Méthodologie</h2>
                 <ul>
-                    <li>Étude de la solution LAPS</li>
-                    <li>Vérification de la compatibilité des machines</li>
-                    <li>Rédaction d’un runbook et d’une documentation</li>
-                    <li>Installation de LAPS sur le contrôleur de domaine</li>
-                    <li>Déploiement via GPO</li>
-                    <li>Tests sur machines compatibles et incompatibles</li>
-                    <li>Déploiement complet dans l’environnement de production</li>
+                    <li>Recherche sur les fonctionnalités de Windows LAPS</li>
+                    <li>Étude de compatibilité des systèmes</li>
+                    <li>Installation sur un environnement de test</li>
+                    <li>Création d’une GPO dédiée</li>
+                    <li>Vérification du bon fonctionnement et de la remontée des mots de passe dans AD</li>
+                    <li>Documentation complète (runbook, guide de déploiement)</li>
+                    <li>Déploiement progressif en production</li>
                 </ul>
             </section>
-            <section>
 
+            <section>
+                <h2>Déploiement de Windows LAPS</h2>
+                <h3>1. Recherche et vérification de la compatibilité</h3>
+                <p>
+                    Avant toute chose, j'ai dû me documenter. <br>
+                    Cette nouvelle version de LAPS, arrivée le 11 avril 2023, est désormais intégrée nativement à
+                    certaines versions de Windows
+                    (comme Windows 11 23H2), ou apportée via mises à jour post-avril 2023.
+                    Contrairement à l’ancienne version dite "Legacy", elle ne nécessite plus de logiciel tiers, mais
+                    uniquement une configuration
+                    côté contrôleur de domaine et via GPO.
+                </p>
+
+
+                <p>J'ai donc créé un tableau Excel référençant tous les systèmes d’exploitation présents dans
+                    l’entreprise,
+                    ainsi que le nombre de machines pour chaque version. Ce tableau indiquait aussi la compatibilité
+                    avec les deux versions de LAPS. <br>
+                    Cela a permis à l’entreprise de choisir la version Windows LAPS, plus simple à déployer et plus
+                    efficace.
+                </p>
+
+
+                <h3>2. Rédaction de la documentation et du runbook</h3>
+                <p>
+                    Une fois la version choisie, j’ai rédigé une documentation technique détaillant toutes les étapes
+                    nécessaires à la mise en place
+                    de Windows LAPS dans l’entreprise. Cette documentation comprend :
+                </p>
+                <ul>
+                    <li>Les prérequis techniques (version OS, droits AD, etc.).</li>
+                    <li>Les commandes PowerShell utilisées pour donner des permissions.</li>
+                    <li>Les captures d’écran pour chaque étape, afin de faciliter la compréhension. (ajoutées pendant le
+                        déploiement test)</li>
+                    <li>Les erreurs fréquentes rencontrées et comment les corriger.</li>
+                </ul>
+                <img src="..\..\assets\images\Laps_doc.png" alt="Capture d’écran de la documentation LAPS"
+                    style="max-width:100%;margin-top:10px;">
+
+                <p>
+                    En complément, j’ai rédigé un <strong>runbook</strong> synthétique : un document opérationnel
+                    destiné à être suivi étape par étape
+                    en production. Il permet à n’importe qui de reproduire le déploiement sans avoir à
+                    consulter l’ensemble de la documentation technique .
+                </p>
+                <img src="..\..\assets\images\Laps_runbook.png" alt="Capture d’écran du runbook LAPS"
+                    style="max-width:100%;margin-top:10px;">
+
+
+
+                <h3>3. Étapes techniques principales du déploiement de LAPS</h3>
+                <p>Voici les grandes étapes techniques réalisées dans le cadre du déploiement :</p>
+                <ol>
+                    <li>
+                        <strong>Mise à jour du schéma Active Directory</strong> pour ajouter les nouveaux attributs
+                        nécessaires à Windows LAPS.
+                    </li>
+                    <li>
+                        <strong>Vérification de la présence des attributs LAPS dans l’AD </strong><br><br>
+                        <img src="..\..\assets\images\Laps_attributes.png"
+                            alt="Capture d’écran des attributs LAPS dans ADSI Edit"
+                            style="max-width:100%;margin-top:10px;">
+                    </li>
+                    <li>
+                        <strong>Attribution des différente permissions </strong> comme des droits permettant de lire ou
+                        de réinitialiser les mots de passe dans Active Directory.
+                    </li>
+                    <li>
+                        <strong>Création et liaison de la GPO :</strong>
+                        <p>
+                            Une stratégie de groupe (GPO) dédiée a été créée via la console GPMC.
+                        </p>
+                        <p>
+                            Nous avons accédé aux paramètres de LAPS, disponibles dans l’éditeur de GPO sous<br>
+                            <em>(Configuration de l’ordinateur &gt; Paramètres Windows &gt; Paramètres de sécurité &gt;
+                                Windows LAPS)</em>.
+                        </p>
+                        <figure>
+                            <img src="..\..\assets\images\Laps_GPO.png" alt="Paramètres LAPS dans la GPO"
+                                style="width:100%;max-width:600px;">
+                            <figcaption>Paramètres LAPS configurés dans la GPO</figcaption>
+                        </figure>
+                        <p>
+                            La GPO est ensuite liée aux OU contenant les ordinateurs cibles pour appliquer la
+                            stratégie.
+                        </p>
+                    </li>
+                </ol>
+                <p>
+                    Pour chaque OU , il sera nécessaire d'attribué les permissions nécessaires et lier la GPO
+                    correspondante .
+                </p>
+
+
+                <h3>4. Test de déploiement en environnement contrôlé</h3>
+                <p>
+                    Avant de généraliser le déploiement, une phase de test a été réalisée sur une <strong>OU
+                        dédiée</strong>
+                    contenant trois ordinateurs.
+                </p>
+                <ul>
+                    <li>Deux machines étaient compatibles avec la version Windows LAPS.</li>
+                    <li>Une machine était incompatible et a été utilisée pour observer le comportement dans ce cas
+                        (aucune action, absence de mot de passe généré).</li>
+                </ul>
+                <p>
+                    Cette étape a permis de vérifier que :
+                </p>
+                <ul>
+                    <li>- Les mots de passe étaient bien générés et stockés dans l’AD.</li>
+                    <li>- Les permissions étaient correctement configurées.</li>
+                    <li>- La politique de mot de passe définie dans la GPO s’appliquait bien sur les postes compatibles.
+                    </li>
+                    <li>- La machine non compatible restait sans effet, ce qui évite les erreurs de déploiement non
+                        maîtrisé.</li>
+                </ul>
+
+                <h3>Déploiement global</h3>
+                <p>
+                    Une fois le test validé, le déploiement a été effectué progressivement sur l’ensemble des unités
+                    d’organisation cibles.
+                    Pour chaque OU, la GPO a été liée, et les droits nécessaires ont été accordés aux groupes
+                    d’administration désignés.
+                </p>
+                <p>
+                    Le runbook et la documentation ont été utilisés comme support pour garantir la reproductibilité
+                    de l’opération,
+                    en assurant que chaque étape était correctement suivie.
+                </p>
+
+
+            </section>
+
+
+            <section>
                 <h2>Outils et compétences mobilisés</h2>
                 <h3>Outils</h3>
                 <ul>
                     <li>Active Directory</li>
                     <li>PowerShell</li>
                     <li>GPMC (console de gestion des GPO)</li>
+                    <li>Windows Server 2022</li>
                 </ul>
 
                 <h3>Compétences techniques</h3>
                 <ul>
-                    <li>Gestion d’Active Directory</li>
-                    <li>Déploiement de GPO</li>
-                    <li>Sécurisation des accès administratifs</li>
+                    <li>Administration système</li>
+                    <li>Déploiement de politiques de sécurité</li>
                     <li>Analyse de logs (Event Viewer)</li>
+                    <li>Scripting PowerShell</li>
                 </ul>
 
                 <h3>Compétences transversales</h3>
                 <ul>
+                    <li>Travail en autonomie</li>
+                    <li>Recherche documentaire</li>
+                    <li>Rédaction technique</li>
                     <li>Esprit d’analyse</li>
-                    <li>Autonomie dans la recherche</li>
-                    <li>Capacité à rédiger des documents techniques</li>
                 </ul>
             </section>
-            <section>
 
+            <section>
                 <h2>Problèmes rencontrés</h2>
-                <p><strong>Incompatibilité avec certaines machines :</strong> des postes étaient sous une version de
-                    Windows
-                    non compatible avec Windows LAPS (mise à jour du 11 avril 2023 requise). J’ai donc dressé une liste
-                    des machines compatibles et non compatibles afin que mon maître de stage puisse décider de la suite
-                    à donner (migration, exclusion du déploiement, ...).</p>
+                <p><strong>Compatibilité des postes :</strong> Certaines machines n’étaient pas à jour et ne
+                    prenaient
+                    pas en charge Windows LAPS. J’ai établi un inventaire précis pour trier les postes
+                    compatibles /
+                    incompatibles. Cela a permis de planifier les mises à jour nécessaires ou d’exclure certains
+                    équipements.</p>
             </section>
-            <section>
 
+            <section>
                 <h2>Ce que j’ai appris</h2>
-                <p>Ce projet m’a permis de mieux comprendre le fonctionnement d’un domaine Active Directory, la gestion
-                    des
-                    comptes locaux, les GPO, et la cybersécurité appliquée. J’ai aussi appris à présenter un projet à
+                <p>Ce projet m’a permis de mieux comprendre les enjeux de la sécurité système en entreprise.
+                    J’ai
+                    découvert les mécanismes de GPO avancés, l’intégration d’un outil Microsoft dans un
+                    environnement de
+                    production, et j’ai aussi développé mes compétences en communication technique en rédigeant
                     une
-                    équipe technique et à documenter une solution de manière professionnelle.</p>
+                    documentation claire et réutilisable.</p>
             </section>
-            <section>
-
-                <h2>À propos de LAPS</h2>
-                <p>LAPS est une technologie développée par Microsoft pour améliorer la sécurité des comptes
-                    administrateurs
-                    locaux. Il existe deux versions : <strong>LAPS Legacy</strong> (ancienne version) et <strong>Windows
-                        LAPS</strong> (intégré aux mises à jour récentes). Elle permet une gestion centralisée,
-                    sécurisée et
-                    automatisée des mots de passe locaux.</p>
-
-                <p>Grâce à cette mission, j’ai non seulement renforcé mes compétences techniques mais également gagné en
-                    autonomie, en rigueur et en compréhension des enjeux de sécurité en entreprise.</p>
-            </section>
-
-
         </section>
 
-        <!-- Colonne secondaire -->
-        <aside class="article-sidebar">
-            <div class="company-card">
-                <h2>L’entreprise</h2>
-                <p><strong>Nom :</strong> test</p>
-                <p><strong>Localisation :</strong> S</p>
-                <p><strong>Secteur :</strong> Cybersécurité / Réseaux</p>
-                <p><strong>Taille :</strong> ?</p>
-                <a href="../company/STS_Composite.html" class="btn-sidebar">Voir plus →</a>
-            </div>
-        </aside>
-    </main>
 
+
+    </main>
 
     <footer>
         <p>&copy; 2025 – Mathis Vassy – Blog de Stage</p>
