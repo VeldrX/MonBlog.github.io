@@ -7,11 +7,11 @@
         "file": "articleLAPS.html"
     },
     {
-        "id": "test2",
-        "title": "Semaine 2 – Début des missions",
+        "id": "Sts_Composite",
+        "title": "Stage STS Composite",
         "date": "2025-07-08",
-        "summary": "bla",
-        "file": "articleSemaine2.html"
+        "summary": "Présentation du stage chez STS Composite, une entreprise spécialisée dans la fabrication de pièces composites.",
+        "file": "article_Sts_Composite.html"
     },
     {
         "id": "test2",
