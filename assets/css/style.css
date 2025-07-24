@@ -10,6 +10,52 @@ body {
     line-height: 1.6;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.main-section {
+    background-color: #e0f0ff;
+    /* bleu clair */
+    padding: 40px 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+
+}
+
+.inner-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h3 {
+    color: #1a4f7a;
+}
+
+a.btn-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1a4f7a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.btn-more:hover {
+    background-color: #163f61;
+}
+
+
 .container {
     max-width: 960px;
     margin: auto;
@@ -52,18 +98,25 @@ header h1 {
     /* un peu plus petit */
 }
 
+main {
+    padding-top: 80px;
+    /* pour compenser la hauteur de l'en-tête fixe */
+}
 
 main section {
     background: white;
-    margin-top: 90px;
+    margin-top: 20px;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+main section#articles-list.articles {
+    margin-top: 90px;
+}
+
+main section.contact-section {
+    margin-top: 50px;
 }
 
 ul li {
