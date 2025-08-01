@@ -19,12 +19,5 @@
         "date": "2025-07-08",
         "summary": "Description des tâches de maintien en condition opérationnelle effectuées durant le stage.",
         "file": "articleMCO.html"
-    },
-    {
-        "id": "script_Powershell_LAPS",
-        "title": "Création d'un script Powershell pour LAPS",
-        "date": "2025-07-08",
-        "summary": "Développement d'un script Powershell pour automatiser le suivi de LAPS.",
-        "file": "article_Scipt_LAPS.html"
     }
 ]

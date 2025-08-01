@@ -41,6 +41,27 @@ body {
     /* adapte à la hauteur de ton header */
 }
 
+.tool-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.tool-icons img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.tool-icons img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
 h2,
 h3 {
     color: #1a4f7a;
