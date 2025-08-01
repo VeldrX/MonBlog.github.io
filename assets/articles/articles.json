@@ -4,20 +4,20 @@
         "title": "Mise en place de Windows LAPS",
         "date": "2025-07-01",
         "summary": "Déploiement d'une solution sécurisée pour les mots de passe administrateurs locaux.",
-        "file": "articleLAPS.html"
+        "file": "article_laps.html"
     },
     {
         "id": "Stage_STS_Composite",
         "title": "Stage STS Composite",
         "date": "2025-07-08",
         "summary": "Présentation du stage chez STS Composite, une entreprise spécialisée dans la fabrication de pièces composites.",
-        "file": "article_Sts_Composite.html"
+        "file": "article_sts_composite.html"
     },
     {
         "id": "MCO",
         "title": "MCO - Maintien en Condition Opérationnelle",
         "date": "2025-07-08",
         "summary": "Description des tâches de maintien en condition opérationnelle effectuées durant le stage.",
-        "file": "articleMCO.html"
+        "file": "article_mco.html"
     }
 ]
