@@ -18,13 +18,26 @@
         </nav>
     </header>
 
-    <main class="article-layout">
+    <nav class="table-of-contents">
+        <ul>
+            <li><a href="#Presentation du projet">Présentation du projet</a></li>
+            <li><a href="#Fonctionnement Windows LAPS">Fonctionnement de Windows LAPS</a></li>
+            <li><a href="#Méthodologie">Méthodologie</a></li>
+            <li><a href="#Déploiement de Windows LAPS">Déploiement de Windows LAPS</a></li>
+            <li><a href="#Outils et compétences mobilisés">Outils et compétences mobilisés</a></li>
+            <li><a href="#Problèmes rencontrées">Problèmes rencontrés</a></li>
+            <li><a href="#Ce que j'ai appris">Ce que j’ai appris</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
         <!-- Colonne principale -->
-        <section class="article-main">
+        <div class="container">
             <h1>Mise en place de Windows LAPS</h1>
             <p class="article-date">Mission effectuée – Année 2025</p>
 
-            <section>
+            <section id="Presentation du projet">
                 <h2>Présentation du projet</h2>
                 <p>Dans un environnement professionnel, la sécurité des comptes administrateurs locaux est cruciale.
                     L’utilisation de mots de passe identiques sur plusieurs machines augmente les risques de
@@ -39,7 +52,7 @@
                     déploiement, suivi et présentation finale.</p>
             </section>
 
-            <section>
+            <section id="Fonctionnement Windows LAPS">
                 <h2>Fonctionnement de Windows LAPS</h2>
                 <p><strong>Windows LAPS</strong> est une évolution de <strong>LAPS Legacy</strong>, directement
                     intégrée
@@ -55,7 +68,7 @@
 
             </section>
 
-            <section>
+            <section id="Méthodologie">
                 <h2>Méthodologie</h2>
                 <ul>
                     <li>Recherche sur les fonctionnalités de Windows LAPS</li>
@@ -68,7 +81,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section id="Déploiement de Windows LAPS">
                 <h2>Déploiement de Windows LAPS</h2>
                 <h3>1. Recherche et vérification de la compatibilité</h3>
                 <p>
@@ -105,7 +118,7 @@
                     <li>Les erreurs fréquentes rencontrées et comment les corriger.</li>
                 </ul>
                 <img src="..\..\assets\images\Laps_doc.png" alt="Capture d’écran de la documentation LAPS"
-                    style="max-width:100%;margin-top:10px;">
+                    style="max-width:70%;margin-top:10px;">
 
                 <p>
                     En complément, j’ai rédigé un <strong>runbook</strong> synthétique : un document opérationnel
@@ -114,7 +127,7 @@
                     consulter l’ensemble de la documentation technique .
                 </p>
                 <img src="..\..\assets\images\Laps_runbook.png" alt="Capture d’écran du runbook LAPS"
-                    style="max-width:100%;margin-top:10px;">
+                    style="max-width:70%;margin-top:10px;">
 
 
 
@@ -206,13 +219,14 @@
                     les résultats dans un fichier CSV. Le fichier est ensuite utilisé pour générer un rapport
                     d’état du déploiement sur Power BI.
                 </p>
-                <img src="" alt="Capture d’écran du rapport Power BI" style="max-width:100%;margin-top:10px;">
+                <img src="../images/Laps_report_P_BI.png" alt="Capture d’écran du rapport Power BI"
+                    style="max-width:50%;max-height:100%;margin-top:10px;">
 
 
             </section>
 
 
-            <section>
+            <section id="Outils et compétences mobilisés">
                 <h2>Outils et compétences mobilisés</h2>
                 <h3>Outils</h3>
                 <ul>
@@ -239,7 +253,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section id="Problèmes rencontrées">
                 <h2>Problèmes rencontrés</h2>
                 <p><strong>Compatibilité des postes :</strong> Certaines machines n’étaient pas à jour et ne
                     prenaient
@@ -252,9 +266,19 @@
                     la commande ne trouvait pas le groupe et ne pouvait donc pas s'éxecuter . Nous nous sommes rendu
                     compte qu'il fallait entrer le nom du groupe précédé du nom de domaine , au lieux de rentrer le
                     groupe "group_TEST" il fallait "mon.domaine\group_TEST" . </p>
+
+                <p><strong>Rapport PingCastle :</strong> Après avoir déployer la solution LAPS dans tout les sites , le
+                    rapport de sécurité de PingCastle a remonté un problème avec certains ordinateurs qui avaient été
+                    ajouté manuellement par un utilisateur, cette action donnait des droits suplémentaires à cet
+                    utilisateur . Pour résoudre ce problème je me suis dans un premier temps renseigné sue ce que
+                    l'action d'ajouté une machine manuellement causait , j'ai découvert l'existence de l'attribut
+                    ms-DS-CreatorSID qui permet de savoir quel utilisateur a ajouter la machine , et les permissions
+                    suplémentaires qu'il avait. J'ai donc rédiger un mail au personne concerné pour expliquer le
+                    problème et leur donné un petit protocole pour retirer les permissions et vérifier le bon
+                    fonctionnement de la machine après les modifications.</p>
             </section>
 
-            <section>
+            <section id="Ce que j'ai appris">
                 <h2>Ce que j’ai appris</h2>
                 <p>Ce projet m’a permis de mieux comprendre les enjeux de la sécurité système en entreprise.
                     J’ai
@@ -269,7 +293,7 @@
                 <h2>SOURCES</h2>
                 <p>TEST</p>
             </section>
-        </section>
+            </section>
 
 
 

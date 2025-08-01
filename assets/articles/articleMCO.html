@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Déploiement de Windows LAPS – Mon Blog de Stage</title>
+    <title>Missions MCO - Stage chez STS Composite</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -18,240 +18,144 @@
         </nav>
     </header>
 
-    <main class="article-layout">
-        <!-- Colonne principale -->
-        <section class="article-main">
-            <h1>Mise en place de Windows LAPS</h1>
-            <p class="article-date">Mission effectuée – Année 2025</p>
+    <nav class="table-of-contents">
+        <ul>
+            <li><a href="#introduction">1. Qu'est-ce que le MCO ?</a></li>
+            <li><a href="#taches-journalières">2. Tâches journalières</a></li>
+            <li><a href="#taches-hebdomadaires">3. Tâches hebdomadaires</a></li>
+            <li><a href="#taches-ponctuelles">4. Autres tâches ponctuelles</a></li>
+            <li><a href="#bilan-personnel">5. Bilan personnel</a></li>
+        </ul>
+    </nav>
 
-            <section>
-                <h2>Présentation du projet</h2>
-                <p>Dans un environnement professionnel, la sécurité des comptes administrateurs locaux est cruciale.
-                    L’utilisation de mots de passe identiques sur plusieurs machines augmente les risques de
-                    compromission
-                    en cas de fuite ou d’attaque.</p>
-                <p>C'est pour cela que ,lors de mon stage , j'ai été chargé de mettre en place une solution choisis par
-                    l'entreprise pour réduire ces même risque.</p>
-                <p>J’ai donc été chargé de mettre en place <strong>Windows LAPS</strong>, une
-                    solution Microsoft qui permet d’attribuer à chaque machine un mot de passe administrateur local
-                    unique, chiffré, stocké dans Active Directory, et renouvelé automatiquement.</p>
-                <p>Cette mission m’a permis de mener un projet complet : étude technique, tests, documentation,
-                    déploiement, suivi et présentation finale.</p>
+    <main>
+        <div class="container">
+            <h1>Missions MCO - Stage chez STS Composite</h1>
+
+            <section class="section" id="introduction">
+                <h2>1. Qu'est-ce que le MCO ?</h2>
+                <p>Le Maintien en Conditions Opérationnelles (MCO) désigne l’ensemble des actions régulières
+                    destinées à
+                    assurer le bon fonctionnement, la performance et la sécurité de l’infrastructure informatique
+                    sur le
+                    long terme. Ces actions sont planifiées selon plusieurs fréquences :
+                    <strong>journalières</strong>,
+                    <strong>hebdomadaires</strong>, <strong>mensuelles</strong> ou encore
+                    <strong>annuelles</strong>.
+                </p>
+
+                <p>Chez <strong>STS Composite</strong>, les tâches de MCO sont prioritaires lorsqu’aucun ticket
+                    urgent
+                    n’est
+                    ouvert. Dès ma première semaine de stage, j’ai été progressivement formé à ces tâches, puis j’en
+                    ai
+                    pris
+                    la responsabilité, notamment pour la partie journalière.</p>
             </section>
 
-            <section>
-                <h2>Fonctionnement de Windows LAPS</h2>
-                <p><strong>Windows LAPS</strong> est une évolution de <strong>LAPS Legacy</strong>, directement
-                    intégrée
-                    aux versions récentes de Windows (post avril 2023). Il permet de :</p>
+            <section class="section" id="taches-journalières">
+                <h2>2. Tâches journalières</h2>
+
+                <h3>✔ Vérification des sauvegardes</h3>
+                <p>Chaque matin, je commençais par la vérification des backups sur plusieurs serveurs des sites
+                    européens
+                    sur machines virtuelles.
+                    Le groupe STS disposant de plusieurs implantations (France, Allemagne, Chine, Mexique...),
+                    l’équipe
+                    IT
+                    de Saint-Désirat supervise une grande partie de cette infrastructure distribuée.</p>
+
+                <p>J’examinais si les sauvegardes s’étaient bien déclenchées automatiquement ou si des erreurs
+                    apparaissaient . Cette tâche m’a permis de comprendre
+                    l’importance stratégique des sauvegardes : elles permettent de restaurer des systèmes ou des
+                    fichiers
+                    critiques en cas d’incident technique, de ransomware ou d’erreur humaine.</p>
+
+                <h3>✔ Contrôle des firewalls</h3>
+                <p>Je procédais ensuite au contrôle de l’état des services sur les firewalls des différents sites.
+                    Cela
+                    comprenait l’analyse du statut global, des services VPN, et de l’accès aux différentes
+                    interfaces
+                    réseau.</p>
+                <p>Cette routine quotidienne était essentielle pour détecter rapidement les pannes réseau ou les
+                    éventuelles
+                    anomalies de sécurité (blocages, surconsommation CPU, erreurs système, etc.).</p>
+            </section>
+
+            <section class="section" id="taches-hebdomadaires">
+                <h2>3. Tâches hebdomadaires</h2>
+
+                <h3>✔ Rotation des bandes de sauvegarde</h3>
+                <p>Une fois par semaine, je m’occupais de la rotation physique des bandes de sauvegarde utilisées
+                    sur le
+                    site de Saint-Désirat. Il s’agit de cartouches magnétiques dans lesquelles sont stockées les
+                    sauvegardes, en complément des sauvegardes numériques sur disque. Ce support physique est
+                    utilisé
+                    pour
+                    assurer une <strong>conservation long terme</strong> : certaines bandes sont utilisées au mois
+                    d'autre à
+                    l’année.</p>
+
+                <p>Je recevais par mail la liste des bandes à retirer et une suggestion de celles à insérer, basée
+                    sur
+                    leur
+                    historique d’usage (afin de répartir l’usure et prévenir toute défaillance matérielle). Ensuite
+                    :
+                </p>
                 <ul>
-                    <li>Générer un mot de passe aléatoire et sécurisé pour le compte administrateur local</li>
-                    <li>Stocker ce mot de passe chiffré dans un attribut d’Active Directory</li>
-                    <li>Renouveler ce mot de passe à intervalles réguliers</li>
-                    <li>Le rendre accessible uniquement à certains groupes (administrateurs, techniciens, etc.)
+                    <li>Je récupérais les nouvelles bandes dans un coffre sécurisé ;</li>
+                    <li>Je me rendais dans un autre bâtiment où se trouve la machine de sauvegarde ;</li>
+                    <li>Je remplaçais les bandes, en notant soigneusement la date de retrait et la date de
+                        réinsertion
+                        prévue ;</li>
+                    <li>Enfin, je vérifiais sur le serveur que les nouvelles bandes étaient bien reconnues et
+                        actives.
                     </li>
                 </ul>
 
-
+                <p>Cette procédure rigoureuse m’a familiarisé avec la gestion physique des supports de sauvegarde et
+                    les
+                    enjeux de la conservation externe des données critiques.</p>
             </section>
 
-            <section>
-                <h2>Méthodologie</h2>
-                <ul>
-                    <li>Recherche sur les fonctionnalités de Windows LAPS</li>
-                    <li>Étude de compatibilité des systèmes</li>
-                    <li>Installation sur un environnement de test</li>
-                    <li>Création d’une GPO dédiée</li>
-                    <li>Vérification du bon fonctionnement et de la remontée des mots de passe dans AD</li>
-                    <li>Documentation complète (runbook, guide de déploiement)</li>
-                    <li>Déploiement progressif en production</li>
-                </ul>
+            <section class="section" id="taches-ponctuelles">
+                <h2>4. Autres tâches ponctuelles</h2>
+
+                <h3>✔ Suivi des quarantaines Office 365</h3>
+                <p>J’ai également eu l’occasion d’observer la gestion des quarantaines mail via l’interface
+                    d’administration
+                    Office 365. L’objectif était de détecter les <strong>faux positifs</strong> : mails légitimes
+                    bloqués à
+                    tort.</p>
+
+                <p>Ces vérifications permettent d’assurer que les communications importantes ne sont pas retardées
+                    ou
+                    supprimées, tout en conservant une bonne protection contre le spam et les menaces par e-mail
+                    (phishing,
+                    malware...).</p>
             </section>
 
-            <section>
-                <h2>Déploiement de Windows LAPS</h2>
-                <h3>1. Recherche et vérification de la compatibilité</h3>
-                <p>
-                    Avant toute chose, j'ai dû me documenter. <br>
-                    Cette nouvelle version de LAPS, arrivée le 11 avril 2023, est désormais intégrée nativement à
-                    certaines versions de Windows
-                    (comme Windows 11 23H2), ou apportée via mises à jour post-avril 2023.
-                    Contrairement à l’ancienne version dite "Legacy", elle ne nécessite plus de logiciel tiers, mais
-                    uniquement une configuration
-                    côté contrôleur de domaine et via GPO.
-                </p>
+            <section class="section" id="bilan-personnel">
+                <h2>5. Bilan personnel</h2>
+                <p>Le fait d’être impliqué dans les tâches de MCO m’a permis de développer une véritable rigueur
+                    professionnelle. En environnement de production, chaque détail compte : un oubli ou une erreur
+                    dans
+                    les
+                    sauvegardes ou les firewalls peut avoir des conséquences importantes.</p>
 
-
-                <p>J'ai donc créé un tableau Excel référençant tous les systèmes d’exploitation présents dans
-                    l’entreprise,
-                    ainsi que le nombre de machines pour chaque version. Ce tableau indiquait aussi la compatibilité
-                    avec les deux versions de LAPS. <br>
-                    Cela a permis à l’entreprise de choisir la version Windows LAPS, plus simple à déployer et plus
-                    efficace.
-                </p>
-
-
-                <h3>2. Rédaction de la documentation et du runbook</h3>
-                <p>
-                    Une fois la version choisie, j’ai rédigé une documentation technique détaillant toutes les étapes
-                    nécessaires à la mise en place
-                    de Windows LAPS dans l’entreprise. Cette documentation comprend :
-                </p>
+                <p>Grâce à ces missions, j’ai pu :</p>
                 <ul>
-                    <li>Les prérequis techniques (version OS, droits AD, etc.).</li>
-                    <li>Les commandes PowerShell utilisées pour donner des permissions.</li>
-                    <li>Les captures d’écran pour chaque étape, afin de faciliter la compréhension. (ajoutées pendant le
-                        déploiement test)</li>
-                    <li>Les erreurs fréquentes rencontrées et comment les corriger.</li>
-                </ul>
-                <img src="..\..\assets\images\Laps_doc.png" alt="Capture d’écran de la documentation LAPS"
-                    style="max-width:100%;margin-top:10px;">
-
-                <p>
-                    En complément, j’ai rédigé un <strong>runbook</strong> synthétique : un document opérationnel
-                    destiné à être suivi étape par étape
-                    en production. Il permet à n’importe qui de reproduire le déploiement sans avoir à
-                    consulter l’ensemble de la documentation technique .
-                </p>
-                <img src="..\..\assets\images\Laps_runbook.png" alt="Capture d’écran du runbook LAPS"
-                    style="max-width:100%;margin-top:10px;">
-
-
-
-                <h3>3. Étapes techniques principales du déploiement de LAPS</h3>
-                <p>Voici les grandes étapes techniques réalisées dans le cadre du déploiement :</p>
-                <ol>
-                    <li>
-                        <strong>Mise à jour du schéma Active Directory</strong> pour ajouter les nouveaux attributs
-                        nécessaires à Windows LAPS.
+                    <li>Approfondir mes connaissances en <strong>infrastructure IT</strong> réelle ;</li>
+                    <li>Mettre en pratique des <strong>gestes techniques concrets</strong> ;</li>
+                    <li>Renforcer ma compréhension des outils de supervision et de sécurité ;</li>
+                    <li>Travailler avec une équipe expérimentée, dans une logique de documentation et de process.
                     </li>
-                    <li>
-                        <strong>Vérification de la présence des attributs LAPS dans l’AD </strong><br><br>
-                        <img src="..\..\assets\images\Laps_attributes.png"
-                            alt="Capture d’écran des attributs LAPS dans ADSI Edit"
-                            style="max-width:100%;margin-top:10px;">
-                    </li>
-                    <li>
-                        <strong>Attribution des différente permissions </strong> comme des droits permettant de lire ou
-                        de réinitialiser les mots de passe dans Active Directory.
-                    </li>
-                    <li>
-                        <strong>Création et liaison de la GPO :</strong>
-                        <p>
-                            Une stratégie de groupe (GPO) dédiée a été créée via la console GPMC.
-                        </p>
-                        <p>
-                            Nous avons accédé aux paramètres de LAPS, disponibles dans l’éditeur de GPO sous<br>
-                            <em>(Configuration de l’ordinateur &gt; Paramètres Windows &gt; Paramètres de sécurité &gt;
-                                Windows LAPS)</em>.
-                        </p>
-                        <figure>
-                            <img src="..\..\assets\images\Laps_GPO.png" alt="Paramètres LAPS dans la GPO"
-                                style="width:100%;max-width:600px;">
-                            <figcaption>Paramètres LAPS configurés dans la GPO</figcaption>
-                        </figure>
-                        <p>
-                            La GPO est ensuite liée aux OU contenant les ordinateurs cibles pour appliquer la
-                            stratégie.
-                        </p>
-                    </li>
-                </ol>
-                <p>
-                    Pour chaque OU , il sera nécessaire d'attribué les permissions nécessaires et lier la GPO
-                    correspondante .
-                </p>
-
-
-                <h3>4. Test de déploiement en environnement contrôlé</h3>
-                <p>
-                    Avant de généraliser le déploiement, une phase de test a été réalisée sur une <strong>OU
-                        dédiée</strong>
-                    contenant trois ordinateurs.
-                </p>
-                <ul>
-                    <li>Deux machines étaient compatibles avec la version Windows LAPS.</li>
-                    <li>Une machine était incompatible et a été utilisée pour observer le comportement dans ce cas
-                        (aucune action, absence de mot de passe généré).</li>
-                </ul>
-                <p>
-                    Cette étape a permis de vérifier que :
-                </p>
-                <ul>
-                    <li>- Les mots de passe étaient bien générés et stockés dans l’AD.</li>
-                    <li>- Les permissions étaient correctement configurées.</li>
-                    <li>- La politique de mot de passe définie dans la GPO s’appliquait bien sur les postes compatibles.
-                    </li>
-                    <li>- La machine non compatible restait sans effet, ce qui évite les erreurs de déploiement non
-                        maîtrisé.</li>
                 </ul>
 
-                <h3>Déploiement global</h3>
-                <p>
-                    Une fois le test validé, le déploiement a été effectué progressivement sur l’ensemble des unités
-                    d’organisation cibles.
-                    Pour chaque OU, la GPO a été liée, et les droits nécessaires ont été accordés aux groupes
-                    d’administration désignés.
-                </p>
-                <p>
-                    Le runbook et la documentation ont été utilisés comme support pour garantir la reproductibilité
-                    de l’opération,
-                    en assurant que chaque étape était correctement suivie.
-                </p>
-
-
+                <p>Le MCO m’a donné une vision très concrète des bonnes pratiques d’exploitation informatique, et
+                    m’a
+                    préparé aux réalités du travail en entreprise.</p>
             </section>
-
-
-            <section>
-                <h2>Outils et compétences mobilisés</h2>
-                <h3>Outils</h3>
-                <ul>
-                    <li>Active Directory</li>
-                    <li>PowerShell</li>
-                    <li>GPMC (console de gestion des GPO)</li>
-                    <li>Windows Server 2022</li>
-                </ul>
-
-                <h3>Compétences techniques</h3>
-                <ul>
-                    <li>Administration système</li>
-                    <li>Déploiement de politiques de sécurité</li>
-                    <li>Analyse de logs (Event Viewer)</li>
-                    <li>Scripting PowerShell</li>
-                </ul>
-
-                <h3>Compétences transversales</h3>
-                <ul>
-                    <li>Travail en autonomie</li>
-                    <li>Recherche documentaire</li>
-                    <li>Rédaction technique</li>
-                    <li>Esprit d’analyse</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Problèmes rencontrés</h2>
-                <p><strong>Compatibilité des postes :</strong> Certaines machines n’étaient pas à jour et ne
-                    prenaient
-                    pas en charge Windows LAPS. J’ai établi un inventaire précis pour trier les postes
-                    compatibles /
-                    incompatibles. Cela a permis de planifier les mises à jour nécessaires ou d’exclure certains
-                    équipements.</p>
-            </section>
-
-            <section>
-                <h2>Ce que j’ai appris</h2>
-                <p>Ce projet m’a permis de mieux comprendre les enjeux de la sécurité système en entreprise.
-                    J’ai
-                    découvert les mécanismes de GPO avancés, l’intégration d’un outil Microsoft dans un
-                    environnement de
-                    production, et j’ai aussi développé mes compétences en communication technique en rédigeant
-                    une
-                    documentation claire et réutilisable.</p>
-            </section>
-        </section>
-
-
 
     </main>
 

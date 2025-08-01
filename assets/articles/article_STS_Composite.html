@@ -6,6 +6,33 @@
     <title>Stage chez STS Composite – Mathis Vassy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Dans la balise <head>, ajoute si besoin : -->
+    <style>
+        .img-center {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-float {
+            float: right;
+            margin: 0 0 10px 20px;
+            width: 250px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .img-float {
+                float: none;
+                display: block;
+                margin: 15px auto;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -18,6 +45,17 @@
         </nav>
     </header>
 
+    <nav class="table-of-contents">
+        <ul>
+            <li><a href="#introduction">1. Présentation de l'entreprise</a></li>
+            <li><a href="#groupe-it">2. Le groupe IT</a></li>
+            <li><a href="#integration">3. Mon intégration dans l’équipe IT</a></li>
+            <li><a href="#missions">4. Missions réalisées</a></li>
+            <li><a href="#Bilan personnel">5. Bilan personnel</a></li>
+            <li><a href="#conclusion">6. Conclusion</a></li>
+        </ul>
+    </nav>
+
     <main>
 
         <div class="container">
@@ -25,14 +63,22 @@
 
 
 
-            <section class="section">
+            <section class="section" id="introduction">
                 <h2>1. Présentation de l'entreprise</h2>
-                <p><strong>STS Composite</strong> fait partie du <strong>groupe STS AG</strong>, un fournisseur mondial
-                    de
-                    premier plan de composants et de systèmes innovants destinés aux industries des véhicules
-                    utilitaires et de l'automobile. L’entreprise accompagne les plus grands constructeurs en leur
-                    fournissant des solutions techniques avancées et adaptées aux exigences de performance, de
-                    durabilité et de design.</p>
+                <div class="row">
+                    <div class="column-text">
+                        <p><strong>STS Composite</strong> fait partie du <strong>groupe STS AG</strong>, un fournisseur
+                            mondial
+                            de premier plan de composants et de systèmes innovants destinés aux industries des véhicules
+                            utilitaires et de l'automobile. L’entreprise accompagne les plus grands constructeurs en
+                            leur
+                            fournissant des solutions techniques avancées et adaptées aux exigences de performance, de
+                            durabilité et de design.</p>
+                    </div>
+                    <div class="column-image">
+                        <img src="../images/logo-sts.png" alt="Logo STS Composite" />
+                    </div>
+                </div>
 
                 <p>STS propose une large gamme de pièces pour :</p>
                 <ul>
@@ -45,13 +91,16 @@
                 <ul>
                     <li>améliorer l’esthétique et l’aérodynamisme des véhicules,</li>
                     <li>réduire les nuisances sonores intérieures et extérieures,</li>
-                    <li>et surtout alléger le poids global des véhicules grâce à des matériaux composites techniques.
+                    <li>et surtout alléger le poids global des véhicules grâce à des matériaux composites
+                        techniques.
                     </li>
                 </ul>
 
-                <p>Le groupe se distingue par sa <strong>forte intégration verticale</strong> : il prend en charge
+                <p>Le groupe se distingue par sa <strong>forte intégration verticale</strong> : il prend en
+                    charge
                     l’ensemble du cycle de vie du produit, de la conception à la fabrication, en passant par la
-                    recherche & développement et les tests qualité. Parmi les technologies maîtrisées, on retrouve :</p>
+                    recherche & développement et les tests qualité. Parmi les technologies maîtrisées, on
+                    retrouve :</p>
                 <ul>
                     <li>l’injection plastique,</li>
                     <li>la compression & hot molding,</li>
@@ -59,17 +108,23 @@
                     <li>et les matériaux non-tissés.</li>
                 </ul>
 
-                <p>Le siège social est basé à <strong>Hallbergmoos</strong>, en Allemagne. Le groupe emploie plus de
+                <p>Le siège social est basé à <strong>Hallbergmoos</strong>, en Allemagne. Le groupe emploie
+                    plus de
                     <strong>2500 personnes</strong> à travers le monde.
                 </p>
 
-                <p>STS s’engage dans une démarche de <strong>gouvernance durable, responsable et transparente</strong>,
-                    en intégrant les critères ESG (Environnement, Social, Gouvernance) dans sa stratégie globale. Cet
-                    engagement vise à répondre aux attentes de ses clients, de ses partenaires industriels et de ses
+                <p>STS s’engage dans une démarche de <strong>gouvernance durable, responsable et
+                        transparente</strong>,
+                    en intégrant les critères ESG (Environnement, Social, Gouvernance) dans sa stratégie
+                    globale. Cet
+                    engagement vise à répondre aux attentes de ses clients, de ses partenaires industriels et de
+                    ses
                     collaborateurs.</p>
 
-                <p>Le groupe dispose de près de <strong>17 sites de production</strong> répartis dans <strong>7
-                        pays</strong> et sur <strong>4 continents</strong>, avec une présence forte :</p>
+                <img src="../images/carte-sites-sts.png" alt="Carte des sites STS Composite" class="img-center" />
+
+                <p>Le groupe dispose de près de <strong>4 sites de production</strong> répartis dans <strong>7
+                        pays</strong> et sur <strong>3 continents</strong>, avec une présence forte :</p>
                 <ul>
                     <li>en <strong>Europe</strong> (Allemagne, France, Espagne, Pologne...),</li>
                     <li>en <strong>Chine</strong>,</li>
@@ -78,7 +133,7 @@
 
                 <p>En <strong>France</strong>, plusieurs sites industriels sont implantés :</p>
                 <ul>
-                    <li><strong>Saint‑Désirat</strong> (Ardèche),</li>
+                    <li><strong>Saint‑Désirat</strong>,</li>
                     <li>Tournon-sur-Rhône,</li>
                     <li>Izernore,</li>
                     <li>Blainville-sur-Orne,</li>
@@ -93,8 +148,8 @@
             </section>
 
 
-            <section class="section">
-                <h2>3. Le groupe IT</h2>
+            <section class="section" id="groupe-it">
+                <h2>2. Le groupe IT</h2>
                 <p>
                     Le centre du support informatique du groupe STS en France est situé sur le site de
                     Saint-Désirat, en Ardèche. Ce site occupe une place stratégique au sein de l'organisation IT du
@@ -124,53 +179,131 @@
                 </p>
             </section>
 
-            <section class="section">
-                <h2>1. Mon intégration dans l’équipe</h2>
-                <p>J'effectue actuellement mon stage dans le service informatique du site de Saint-Désirat depuis le 23
-                    juin , il se terminera le 1 août (durée de 6 semaines).
-                    Dès mon arrivée, j’ai
-                    été très bien accueilli par l’équipe. On m’a rapidement intégré dans les activités en cours et
-                    confié des missions concrètes et formatrices.</p>
+            <section class="section" id="integration">
+                <h2>3. Mon intégration dans l’équipe IT</h2>
+
+                <p>
+                    C’est au sein de l’équipe informatique basée à <strong>Saint-Désirat</strong>, plus précisément dans
+                    le service
+                    <strong>Back Office (BO)</strong>, que j’ai intégré le service IT en tant que stagiaire pour une
+                    durée de six semaines,
+                    du <strong>23 juin 2025</strong> au <strong>1er août 2025</strong>.
+                </p>
+
+                <p>
+                    Dès mon arrivée, j’ai été accueilli chaleureusement par <strong>Stéphane CONTE</strong>
+                    et <strong>Pierre DESCORMES</strong>. Ils m’ont rapidement intégré dans leur dynamique de travail,
+                    en me
+                    présentant les locaux,
+                    les procédures internes et les outils informatiques spécifiques à l’entreprise.
+                </p>
+
+                <p>
+                    L’équipe IT de Saint-Désirat gère une grande partie de l’infrastructure informatique pour plusieurs
+                    sites européens du groupe,
+                    ce qui m’a permis d’observer le fonctionnement d’un service informatique multi-sites à l’échelle
+                    internationale.
+                    Mon poste de travail a été rapidement configuré, avec accès aux différents outils nécessaires :
+                    <strong>Active Directory</strong> pour la gestion
+                    des utilisateurs et des machines, <strong>Centreon</strong> pour observer l’état des services,
+                    , <strong>PowerShell</strong>
+                    pour automatiser certaines tâches techniques et quelques autres.
+                </p>
+
+                <p>
+                    Dès les premiers jours, j’ai pu prendre part à des missions concrètes et responsabilisantes.L'équipe
+                    m’a accompagné pour comprendre le fonctionnement des outils et les bonnes pratiques, tout en me
+                    laissant de plus en plus d’autonomie
+                    au fil des semaines. Cette immersion m’a permis de développer à la fois mes compétences techniques
+                    et ma capacité à travailler
+                    dans un environnement professionnel exigeant, mais aussi bienveillant et collaboratif.
+                </p>
+
+                <p>
+                    L’ambiance au sein de l’équipe était très conviviale, ce qui a fortement contribué à mon intégration
+                    et à mon envie de m’impliquer pleinement.
+                    J’ai pu échanger régulièrement avec mes collègues sur les projets en cours, les enjeux techniques
+                    et les bonnes pratiques à adopter.
+                </p>
             </section>
 
 
 
-            <section class="section">
+
+
+            <section class="section" id="missions">
                 <h2>4. Missions réalisées</h2>
-                <p>Voici les principales missions que j’ai réalisées pendant mon stage :</p>
+                <p>Au cours de mon stage, j’ai eu l’opportunité de participer à plusieurs missions techniques et
+                    transversales :</p>
                 <ul>
-                    <li><strong>Maintien en Conditions Opérationnelles (MCO)</strong> : surveillance des services,
-                        tests, et gestion des tickets utilisateurs</li>
-                    <li><strong>Déploiement de Windows LAPS</strong> (Local Administrator Password Solution) :
-                        préparation, configuration, création de GPO, liaison aux OU, vérification du bon fonctionnement
+                    <li>
+                        <strong><a href="articleMCO.html" target="_blank">Maintien en Conditions Opérationnelles
+                                (MCO)</a></strong> : j’ai assuré un suivi quotidien de l’état des services critiques,
+                        réalisé des tests ponctuels sur les postes utilisateurs, et participé à la gestion des tickets
+                        via l’outil de support. Ce travail m’a permis de mieux comprendre la logique de supervision et
+                        de continuité de service dans un environnement de production.
                     </li>
-                    <li><strong>Création d’un script PowerShell</strong> : suivi automatisé du déploiement de LAPS sur
-                        l’ensemble des sites de STS (France, Chine, Mexique), avec export Excel</li>
-                    <li><strong>Rédaction d’un runbook complet</strong> pour documenter l’installation, la configuration
-                        et le dépannage de Windows LAPS</li>
-                    <li><strong>Gestion des imprimantes partagées</strong> : Ajout des imprimantes dans l'outil de suivi
-                        d'état des consommables , services ,etc...</li>
+                    <li>
+                        <strong><a href="articleLAPS.html" target="_blank">Déploiement de Windows LAPS</a></strong> :
+                        j’ai contribué à la mise en place de la solution de gestion automatique des mots de passe
+                        administrateur locaux (LAPS) dans l’infrastructure Active Directory. Cela a impliqué la création
+                        de GPO spécifiques, la configuration des permissions de lecture, la liaison aux unités
+                        organisationnelles (OU), ainsi que la vérification du bon fonctionnement via des tests sur
+                        différents sites.
+                    </li>
+                    <li>
+                        <strong><a href="article_Scipt_LAPS.html" target="_blank">Script PowerShell de suivi
+                                multi-sites</a></strong> : pour améliorer la visibilité sur l’état de déploiement de
+                        LAPS dans le groupe, j’ai développé un script PowerShell automatisé capable de collecter les
+                        informations clés (statut de LAPS, date de rotation du mot de passe, etc.) sur l’ensemble des
+                        sites de STS (France, Chine, Mexique). Les résultats sont exportés sous forme de fichier Excel
+                        facilitant l’analyse globale.
+                    </li>
+                    <li>
+                        <strong>Rédaction d’un runbook
+                            technique</a></strong> : afin de faciliter la maintenance et le futur déploiement de la
+                        solution, j’ai rédigé une documentation complète détaillant l’ensemble des étapes
+                        d’installation, de configuration et de dépannage de Windows LAPS. Ce document servira de
+                        référence aux équipes locales et distantes.
+                    </li>
+                    <li>
+                        <strong><a href="imprimantes-article.html" target="_blank">Gestion des imprimantes
+                                réseau</a></strong> : j’ai été amené à suivre l’ajout et la configuration d’imprimantes
+                        partagées, leur intégration dans l’outil interne de suivi (état, consommables, maintenance), et
+                        à répondre à certaines demandes d’utilisateurs à ce sujet.
+                    </li>
                 </ul>
+
             </section>
 
-            <section class="section">
+            <section class="section" id="Bilan personnel">
                 <h2>5. Bilan personnel</h2>
-                <p>Ce stage m’a permis de renforcer mes compétences dans l’administration système et la sécurité des
-                    infrastructures Windows Server. J’ai découvert les réalités d’un environnement industriel, avec des
-                    enjeux de fiabilité et de productivité importants.</p>
-
-                <p>J’ai également appris à travailler en autonomie tout en collaborant avec une équipe, dans un cadre
-                    professionnel stimulant.</p>
+                <p>
+                    Ce stage m’a offert une immersion concrète dans le fonctionnement d’un service informatique au sein
+                    d’une entreprise industrielle internationale. J’ai pu consolider mes compétences en
+                    <strong>administration système</strong>, en <strong>gestion de parc informatique</strong>, et en
+                    <strong>cybersécurité</strong> grâce à des projets à forte valeur ajoutée.
+                </p>
+                <p>
+                    Il m’a également permis de renforcer ma capacité à travailler en <strong>autonomie</strong>, tout en
+                    collaborant efficacement avec les membres de l’équipe. J’ai pris conscience de l’importance de la
+                    rigueur, de la documentation technique et des sauvegardes dans le maintien d’une
+                    infrastructure fiable et sécurisée.
+                </p>
             </section>
 
-            <section class="section">
+            <section class="section" id="conclusion">
                 <h2>6. Conclusion</h2>
-                <p>Mon stage chez STS Composite a été une expérience très enrichissante, tant sur le plan technique
-                    qu’humain. J’ai pu m’impliquer dans un projet utile pour l’entreprise tout en développant mes
-                    compétences dans un environnement professionnel exigeant.</p>
-
-                <p>Je remercie toute l’équipe de STS Composite pour leur accueil et leur accompagnement tout au long de
-                    cette période.</p>
+                <p>
+                    Mon stage chez <strong>STS Composite</strong> a été une expérience extrêmement enrichissante sur les
+                    plans professionnel et personnel. Il m’a permis de m’investir dans des projets concrets, d’acquérir
+                    de nouvelles compétences techniques et de mieux comprendre les enjeux informatiques d’un grand
+                    groupe industriel.
+                </p>
+                <p>
+                    Je remercie toute l’équipe IT de Saint-Désirat pour leur accueil, leur disponibilité et la confiance
+                    qu’ils m’ont accordée tout au long de cette période.
+                </p>
             </section>
         </div>
 

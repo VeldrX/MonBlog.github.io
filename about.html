@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
+
+
 <body>
     <header>
         <h1>Mon Blog</h1>
@@ -18,60 +20,74 @@
         </nav>
     </header>
 
-    <main class="container">
-        <section class="profil">
-            <h2>Qui suis-je ?</h2>
-            <p>
-                Je m'appelle <strong>Mathis VASSY</strong>, étudiant en <strong>Bachelor Informatique</strong> à
-                <strong>YNOV Campus Lyon</strong>. Passionné par le développement web, les nouvelles technologies et
-                plus particulièrement la
-                <strong>DATA</strong> et <strong>l’intelligence artificielle</strong>, je cherche constamment à
-                apprendre, créer et innover.
-            </p>
-            <p>
-                Après deux années de formation mêlant développement, cybersécurité, réseaux et projets concrets, je vais
-                entamer ma 3<sup>e</sup> année de spécialisation en <strong>Data/IA</strong>. J’ai hâte de
-                développer davantage mes compétences dans ce domaine qui me passionne.
-            </p>
-        </section>
+    <nav class="table-of-contents">
+        <ul>
+            <li><a href="#profil">1. Qui suis-je ?</a></li>
+            <li><a href="#parcours">2. Mon parcours académique</a></li>
+            <li><a href="#cv">3. Mon CV</a></li>
+        </ul>
+    </nav>
 
-        <section class="parcours">
-            <h2>Mon parcours académique</h2>
+    <main>
+        <div class="container">
+            <section class="section" id="profil">
+                <h2>Qui suis-je ?</h2>
+                <p>
+                    Je m'appelle <strong>Mathis VASSY</strong>, étudiant en <strong>Bachelor Informatique</strong> à
+                    <strong>YNOV Campus Lyon</strong>. Passionné par le développement web, les nouvelles technologies et
+                    plus particulièrement la
+                    <strong>DATA</strong> et <strong>l’intelligence artificielle</strong>, je cherche constamment à
+                    apprendre, créer et innover.
+                </p>
+                <p>
+                    Après deux années de formation mêlant développement, cybersécurité, réseaux et projets concrets, je
+                    vais
+                    entamer ma 3<sup>e</sup> année de spécialisation en <strong>Data/IA</strong>. J’ai hâte de
+                    développer davantage mes compétences dans ce domaine qui me passionne.
+                </p>
+            </section>
 
-            <h3>2022 – 2023 : Baccalauréat général</h3>
-            <p>
-                J’ai obtenu mon baccalauréat avec les spécialités <strong>Mathématiques</strong> et
-                <strong>NSI</strong>, où j’ai acquis de solides bases en algorithmique, logique et programmation
-                (Python).
-            </p>
+            <section class="section" id="parcours">
+                <h2>Mon parcours académique</h2>
 
-            <h3>2023 – Maintenant : Bachelor 1 & 2 – YNOV Campus Lyon</h3>
-            <p>
-                Mon Bachelor m’a permis de me professionnaliser grâce à une pédagogie orientée projet. J’ai travaillé en
-                équipe, utilisé des méthodologies agiles et découvert divers domaines de l’informatique :
-            </p>
-            <ul>
-                <li>Développement web avec <strong>Symfony</strong> (authentification, BDD, interface admin)</li>
-                <li>Création d’un jeu 2D sous <strong>Unity</strong> (mécaniques de lumière, ennemis, craft...)</li>
-                <li>Responsable <strong>Data</strong> lors d’un Hackaton (nettoyage, analyse, prototype de modèle)</li>
-            </ul>
-            <p>
-                Ce parcours m’a donné des compétences techniques, mais aussi de l’autonomie, de la rigueur et le goût du
-                travail en équipe.
-            </p>
-        </section>
+                <h3>2022 – 2023 : Baccalauréat général</h3>
+                <p>
+                    J’ai obtenu mon baccalauréat avec les spécialités <strong>Mathématiques</strong> et
+                    <strong>NSI</strong>, où j’ai acquis de solides bases en algorithmique, logique et programmation
+                    (Python).
+                </p>
 
-        <section class="cv">
-            <h2>Mon CV</h2>
-            <p>Voici un aperçu de mon CV :</p>
-            <div class="cv-preview">
-                <iframe src="assets/CV_MATHIS_VASSY.pdf" width="100%" height="600px"
-                    style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
-            </div>
-            <p>📄 Si vous préférez l’ouvrir dans un nouvel onglet :
-                <a href="assets/CV_MATHIS_VASSY.pdf" target="_blank" class="email-link">Voir en plein écran</a>
-            </p>
-        </section>
+                <h3>2023 – Maintenant : Bachelor 1 & 2 – YNOV Campus Lyon</h3>
+                <p>
+                    Mon Bachelor m’a permis de me professionnaliser grâce à une pédagogie orientée projet. J’ai
+                    travaillé en
+                    équipe, utilisé des méthodologies agiles et découvert divers domaines de l’informatique :
+                </p>
+                <ul>
+                    <li>Développement web avec <strong>Symfony</strong> (authentification, BDD, interface admin)</li>
+                    <li>Création d’un jeu 2D sous <strong>Unity</strong> (mécaniques de lumière, ennemis, craft...)</li>
+                    <li>Responsable <strong>Data</strong> lors d’un Hackaton (nettoyage, analyse, prototype de modèle)
+                    </li>
+                </ul>
+                <p>
+                    Ce parcours m’a donné des compétences techniques, mais aussi de l’autonomie, de la rigueur et le
+                    goût du
+                    travail en équipe.
+                </p>
+            </section>
+
+            <section class="section" id="cv">
+                <h2>Mon CV</h2>
+                <p>Voici un aperçu de mon CV :</p>
+                <div class="cv-preview">
+                    <iframe src="assets/CV_MATHIS_VASSY.pdf" width="100%" height="600px"
+                        style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+                </div>
+                <p>📄 Si vous préférez l’ouvrir dans un nouvel onglet :
+                    <a href="assets/CV_MATHIS_VASSY.pdf" target="_blank" class="email-link">Voir en plein écran</a>
+                </p>
+            </section>
+        </div>
     </main>
 
     <footer>
