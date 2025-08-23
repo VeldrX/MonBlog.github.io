@@ -51,131 +51,143 @@
                     ai
                     pris
                     la responsabilité, notamment pour la partie journalière.</p>
-            </section>
+                <p>Toutes ces taches étaientvisible sur un fichier powerBI</p>
+                <img src="../images/MCO_PowerBI.png" alt="PowerBI_MCO"
+                    style="display: block; margin: 20px auto; max-width: 80%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);"
+                    </section>
 
-            <section class="section" id="taches-journalières">
-                <h2>2. Tâches journalières</h2>
+                <section class="section" id="taches-journalières">
+                    <h2>2. Tâches journalières</h2>
 
-                <h3>✔ Vérification des sauvegardes</h3>
-                <div class="row">
-                    <div class="column-text">
-                        <p>Chaque matin, je commençais par la vérification des backups sur plusieurs serveurs des sites
-                            européens
-                            sur machines virtuelles avec l'outils <strong>mRemoteNG</strong> me permettant de me
-                            connecter très facilement
-                            aux machines distantes.
-                            Le groupe STS disposant de plusieurs implantations (France, Allemagne, Chine, Mexique...),
-                            l’équipe
-                            IT
-                            de Saint-Désirat supervise une grande partie de cette infrastructure distribuée.</p>
-                    </div>
-                    <div class="column-image">
-                        <img src="../images/logo-mRemoteNG.png" alt="Logo mRemoteNG" />
-                    </div>
-                </div>
-
-                <p>J’examinais si les sauvegardes s’étaient bien déclenchées automatiquement ou si des erreurs
-                    apparaissaient . Cette tâche m’a permis de comprendre
-                    l’importance stratégique des sauvegardes : elles permettent de restaurer des systèmes ou des
-                    fichiers
-                    critiques en cas d’incident technique, de ransomware ou d’erreur humaine.</p>
-
-
-
-                <h3>✔ Contrôle des firewalls</h3>
-                <div class="row">
-                    <div class="column-image">
-                        <img src="../images/logo-centreon.png" alt="Logo mRemoteNG" style="max-width: 60%;" />
-                    </div>
-                    <div class="column-text">
-                        <p>Je procédais ensuite au contrôle de l’état des services sur les firewalls grace à un outils
-                            de
-                            l'entreprise , <strong>Centreon</strong> , cet outils permet de surveillé énormément de
-                            choses dont
-                            les service de firewalls.</p>
-                        <p>Cette routine quotidienne était essentielle pour détecter rapidement les pannes réseau ou les
-                            éventuelles
-                            anomalies de sécurité (blocages, surconsommation CPU, erreurs système, etc.).</p>
+                    <h3>✔ Vérification des sauvegardes</h3>
+                    <div class="row">
+                        <div class="column-text">
+                            <p>Chaque matin, je commençais par la vérification des backups sur plusieurs serveurs des
+                                sites
+                                européens
+                                sur machines virtuelles avec l'outils <strong>mRemoteNG</strong> me permettant de me
+                                connecter très facilement
+                                aux machines distantes ,et d'accéder à <strong>Veeam</strong>.
+                                Le groupe STS disposant de plusieurs implantations (France, Allemagne, Chine,
+                                Mexique...),
+                                l’équipe
+                                IT
+                                de Saint-Désirat supervise une grande partie de cette infrastructure distribuée.</p>
+                        </div>
+                        <div class="column-image">
+                            <img src="../images/Veeam.png" alt="Veeam_screen" />
+                        </div>
                     </div>
 
-                </div>
+                    <p>Sur Veeam j’examinais si les sauvegardes s’étaient bien déclenchées automatiquement ou si des
+                        erreurs
+                        apparaissaient . Cette tâche m’a permis de comprendre
+                        l’importance stratégique des sauvegardes : elles permettent de restaurer des systèmes ou des
+                        fichiers
+                        critiques en cas d’incident technique, de ransomware ou d’erreur humaine.</p>
 
-            </section>
 
-            <section class="section" id="taches-hebdomadaires">
-                <h2>3. Tâches hebdomadaires</h2>
 
-                <h3>✔ Rotation des bandes de sauvegarde</h3>
-                <p>Une fois par semaine, je m’occupais de la rotation physique des bandes de sauvegarde utilisées
-                    sur le
-                    site de Saint-Désirat. Il s’agit de cartouches magnétiques dans lesquelles sont stockées les
-                    sauvegardes, en complément des sauvegardes numériques sur disque. Ce support physique est
-                    utilisé
-                    pour
-                    assurer une <strong>conservation long terme</strong> : certaines bandes sont utilisées au mois
-                    d'autre à
-                    l’année.</p>
+                    <h3>✔ Contrôle des firewalls</h3>
+                    <div class="row">
+                        <div class="column-image">
+                            <img src="../images/centreon_screen.png" alt="centreon_screen" style="max-width: 100%;" />
+                        </div>
+                        <div class="column-text">
+                            <p>Je procédais ensuite au contrôle de l’état des services sur les firewalls grace à un
+                                outils
+                                de
+                                l'entreprise , <strong>Centreon</strong> , cet outils permet de surveillé énormément de
+                                choses dont
+                                les service de firewalls.</p>
+                            <p>Cette routine quotidienne était essentielle pour détecter rapidement les pannes réseau ou
+                                les
+                                éventuelles
+                                anomalies de sécurité (blocages, surconsommation CPU, erreurs système, etc.).</p>
+                        </div>
 
-                <p>Je recevais par mail la liste des bandes à retirer et une suggestion de celles à insérer, basée
-                    sur
-                    leur
-                    historique d’usage (afin de répartir l’usure et prévenir toute défaillance matérielle). Ensuite
-                    :
-                </p>
-                <ul>
-                    <li>Je récupérais les nouvelles bandes dans un coffre sécurisé ;</li>
-                    <li>Je me rendais dans un autre bâtiment où se trouve la machine de sauvegarde ;</li>
-                    <li>Je remplaçais les bandes, en notant soigneusement la date de retrait et la date de
-                        réinsertion
-                        prévue ;</li>
-                    <li>Enfin, je vérifiais sur le serveur que les nouvelles bandes étaient bien reconnues et
-                        actives.
-                    </li>
-                </ul>
+                    </div>
 
-                <p>Cette procédure rigoureuse m’a familiarisé avec la gestion physique des supports de sauvegarde et
-                    les
-                    enjeux de la conservation externe des données critiques.</p>
-            </section>
+                </section>
 
-            <section class="section" id="taches-ponctuelles">
-                <h2>4. Autres tâches ponctuelles</h2>
+                <section class="section" id="taches-hebdomadaires">
+                    <h2>3. Tâches hebdomadaires</h2>
 
-                <h3>✔ Suivi des quarantaines Office 365</h3>
-                <p>J’ai également eu l’occasion d’observer la gestion des quarantaines mail via l’interface
-                    d’administration
-                    Office 365. L’objectif était de détecter les <strong>faux positifs</strong> : mails légitimes
-                    bloqués à
-                    tort.</p>
+                    <h3>✔ Rotation des bandes de sauvegarde</h3>
+                    <p>Une fois par semaine, je m’occupais de la rotation physique des bandes de sauvegarde utilisées
+                        sur le
+                        site de Saint-Désirat. Il s’agit de cartouches magnétiques dans lesquelles sont stockées les
+                        sauvegardes, en complément des sauvegardes numériques sur disque. Ce support physique est
+                        utilisé
+                        pour
+                        assurer une <strong>conservation long terme</strong> : certaines bandes sont utilisées au mois
+                        d'autre à
+                        l’année.</p>
 
-                <p>Ces vérifications permettent d’assurer que les communications importantes ne sont pas retardées
-                    ou
-                    supprimées, tout en conservant une bonne protection contre le spam et les menaces par e-mail
-                    (phishing,
-                    malware...).</p>
-            </section>
+                    <p>Je recevais par mail la liste des bandes à retirer et une suggestion de celles à insérer, basée
+                        sur
+                        leur
+                        historique d’usage (afin de répartir l’usure et prévenir toute défaillance matérielle). Ensuite
+                        :
+                    </p>
+                    <ul>
+                        <li>Je récupérais les nouvelles bandes dans un coffre sécurisé ;</li>
+                        <li>Je me rendais dans un autre bâtiment où se trouve la machine de sauvegarde ;</li>
+                        <li>Je remplaçais les bandes, en notant soigneusement la date de retrait et la date de
+                            réinsertion
+                            prévue ;</li>
+                        <li>Enfin, je vérifiais sur le serveur que les nouvelles bandes étaient bien reconnues et
+                            actives.
+                        </li>
+                    </ul>
 
-            <section class="section" id="bilan-personnel">
-                <h2>5. Bilan personnel</h2>
-                <p>Le fait d’être impliqué dans les tâches de MCO m’a permis de développer une véritable rigueur
-                    professionnelle. En environnement de production, chaque détail compte : un oubli ou une erreur
-                    dans
-                    les
-                    sauvegardes ou les firewalls peut avoir des conséquences importantes.</p>
+                    <p>Cette procédure rigoureuse m’a familiarisé avec la gestion physique des supports de sauvegarde et
+                        les
+                        enjeux de la conservation externe des données critiques.</p>
+                    <p>Voici la vue des bandes sur Veeam sur les serveurs :</p>
+                    <img src="../images/Bande_MCO.png" alt="PowerBI_MCO"
+                        style="display: block; margin: 20px auto; max-width: 80%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);"
+                        </section>
+                </section>
 
-                <p>Grâce à ces missions, j’ai pu :</p>
-                <ul>
-                    <li>Approfondir mes connaissances en <strong>infrastructure IT</strong> réelle ;</li>
-                    <li>Mettre en pratique des <strong>gestes techniques concrets</strong> ;</li>
-                    <li>Renforcer ma compréhension des outils de supervision et de sécurité ;</li>
-                    <li>Travailler avec une équipe expérimentée, dans une logique de documentation et de process.
-                    </li>
-                </ul>
+                <section class="section" id="taches-ponctuelles">
+                    <h2>4. Autres tâches ponctuelles</h2>
 
-                <p>Le MCO m’a donné une vision très concrète des bonnes pratiques d’exploitation informatique, et
-                    m’a
-                    préparé aux réalités du travail en entreprise.</p>
-            </section>
+                    <h3>✔ Suivi des quarantaines Office 365</h3>
+                    <p>J’ai également eu l’occasion d’observer la gestion des quarantaines mail via l’interface
+                        d’administration
+                        Office 365. L’objectif était de détecter les <strong>faux positifs</strong> : mails légitimes
+                        bloqués à
+                        tort.</p>
+
+                    <p>Ces vérifications permettent d’assurer que les communications importantes ne sont pas retardées
+                        ou
+                        supprimées, tout en conservant une bonne protection contre le spam et les menaces par e-mail
+                        (phishing,
+                        malware...).</p>
+                </section>
+
+                <section class="section" id="bilan-personnel">
+                    <h2>5. Bilan personnel</h2>
+                    <p>Le fait d’être impliqué dans les tâches de MCO m’a permis de développer une véritable rigueur
+                        professionnelle. En environnement de production, chaque détail compte : un oubli ou une erreur
+                        dans
+                        les
+                        sauvegardes ou les firewalls peut avoir des conséquences importantes.</p>
+
+                    <p>Grâce à ces missions, j’ai pu :</p>
+                    <ul>
+                        <li>Approfondir mes connaissances en <strong>infrastructure IT</strong> réelle ;</li>
+                        <li>Mettre en pratique des <strong>gestes techniques concrets</strong> ;</li>
+                        <li>Renforcer ma compréhension des outils de supervision et de sécurité ;</li>
+                        <li>Travailler avec une équipe expérimentée, dans une logique de documentation et de process.
+                        </li>
+                    </ul>
+
+                    <p>Le MCO m’a donné une vision très concrète des bonnes pratiques d’exploitation informatique, et
+                        m’a
+                        préparé aux réalités du travail en entreprise.</p>
+                </section>
 
     </main>
 

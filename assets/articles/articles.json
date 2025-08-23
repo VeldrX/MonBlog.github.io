@@ -19,5 +19,19 @@
         "date": "2025-07-08",
         "summary": "Description des tâches de maintien en condition opérationnelle effectuées durant le stage.",
         "file": "article_mco.html"
+    },
+    {
+        "id": "SCRIPT_LAPS",
+        "title": "Script PowerShell pour le suivi du déploiement de LAPS",
+        "date": "2025-07-20",
+        "summary": "Réalisation d’un script PowerShell permettant de suivre le déploiement de LAPS sur l’ensemble des machines du groupe. Génération de rapports CSV et intégration avec Power BI pour une visualisation graphique.",
+        "file": "article_script_laps.html"
+    },
+    {
+        "id": "centreon_wifi",
+        "title": "Supervision des imprimantes et observation des tests de couverture Wi-Fi",
+        "date": "2025-08-23",
+        "summary": "Retour d’expérience sur la mise en place d’une supervision des imprimantes via Centreon et sur l’observation d’une campagne de tests de couverture Wi-Fi.",
+        "file": "article_sts_tache.html"
     }
 ]

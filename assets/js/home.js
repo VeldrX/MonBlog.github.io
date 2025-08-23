@@ -4,17 +4,18 @@ fetch('assets/articles/articles.json')
         const container = document.getElementById('articles-list');
 
         data.forEach(article => {
-            const card = document.createElement('article');
-            card.classList.add('article-card');
+            // Crée un lien englobant toute la carte
+            const cardLink = document.createElement('a');
+            cardLink.classList.add('article-card');
+            cardLink.href = `assets/articles/${article.file}`;
 
-            card.innerHTML = `
-        <h3>${article.title}</h3>
-        <p class="date">${article.date}</p>
-        <p>${article.summary}</p>
-        <a href="assets/articles/${article.file}" class="btn">Lire l’article</a>
-      `;
+            cardLink.innerHTML = `
+                <h3>${article.title}</h3>
+                <p class="date">${article.date}</p>
+                <p>${article.summary}</p>
+            `;
 
-            container.appendChild(card);
+            container.appendChild(cardLink);
         });
     })
     .catch(error => {

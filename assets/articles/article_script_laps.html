@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Suivi du déploiement de LAPS – Mon Blog de Stage</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .img-center {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mon Blog</h1>
+        <nav>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../about.html">À propos</a>
+            <a href="../../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <nav class="table-of-contents">
+        <ul>
+            <li><a href="#introduction">1. Présentation de l'entreprise</a></li>
+            <li><a href="#contexte">2. Contexte du projet</a></li>
+            <li><a href="#script-laps">3. Conception du script PowerShell</a></li>
+            <li><a href="#automatisation">4. Automatisation et suivi</a></li>
+            <li><a href="#power-bi">5. Intégration avec Power BI</a></li>
+            <li><a href="#Bilan personnel">6. Bilan personnel</a></li>
+            <li><a href="#conclusion">7. Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Suivi du déploiement de Windows LAPS avec PowerShell et Power BI</h1>
+
+            <section class="section" id="introduction">
+                <h2>1. Introduction</h2>
+                <p>
+                    Après le déploiement de <strong>Windows LAPS (Local Administrator Password Solution)</strong> au
+                    sein du
+                    groupe STS Composite , il m’a été demandé de poursuivre le projet jusqu’à son terme en mettant en
+                    place
+                    un <strong>suivi du déploiement</strong>.
+                    L’objectif était de savoir, site par site et unité d’organisation (OU) par unité d’organisation,
+                    combien
+                    de machines étaient effectivement couvertes par LAPS, et de pouvoir suivre cette évolution dans le
+                    temps.
+                </p>
+            </section>
+            <section class="section" id="contexte">
+                <h2>Contexte</h2>
+                <p>
+                    Windows LAPS est une solution permettant de renforcer la sécurité en gérant automatiquement
+                    les mots de passe des comptes administrateurs locaux.
+                    Une fois déployée via Active Directory et les GPO, la question restait : <em>“Comment vérifier et
+                        prouver que
+                        le déploiement est bien effectif sur l’ensemble des postes de travail et serveurs ?”</em>.
+                    C’est dans ce cadre que j’ai développé un <strong>script PowerShell d’audit et de
+                        reporting</strong>.
+                </p>
+            </section>
+            <section class="section" id="script-laps">
+                <h2>Conception du script PowerShell</h2>
+                <p>
+                    Le script que j’ai réalisé s’exécute en parcourant l’Active Directory de manière hiérarchique :
+                </p>
+                <ul>
+                    <li>Pour chaque site du groupe</li>
+                    <li>Pour chaque <strong>OU (Organizational Unit)</strong> du site</li>
+                    <li>Pour chaque machine contenue dans l’OU</li>
+                </ul>
+                <p>
+                    Le script vérifie si LAPS est bien appliqué sur la machine.
+                    Les résultats sont ensuite agrégés dans un <strong>fichier CSV</strong>, contenant :
+                </p>
+                <ul>
+                    <li>Le nom du site</li>
+                    <li>Le nom de l’OU</li>
+                    <li>Le nombre total de machines</li>
+                    <li>Le nombre de machines avec LAPS actif</li>
+                    <li>La date d’exécution du script</li>
+                </ul>
+            </section>
+            <section class="section" id="automatisation">
+                <h2>Automatisation et suivi</h2>
+                <p>
+                    Afin d’assurer un suivi régulier, le script peut être exécuté de manière périodique, par exemple
+                    via
+                    une
+                    tâche
+                    planifiée. Chaque exécution génère un nouveau fichier CSV daté, permettant d’historiser
+                    l’évolution
+                    du
+                    déploiement.
+                </p>
+            </section>
+            <section class="section" id="power-bi">
+                <h2>Intégration avec Power BI</h2>
+                <p>
+                    Pour rendre ces données lisibles et facilement exploitables par les responsables IT, j’ai relié
+                    le
+                    CSV
+                    généré par le script
+                    à un <strong>rapport Power BI</strong>.
+                    Cela a permis de créer des graphiques dynamiques montrant :
+                </p>
+                <ul>
+                    <li>L’avancement du déploiement par site</li>
+                    <li>Le détail par OU</li>
+                    <li>L’évolution dans le temps</li>
+                </ul>
+                <p>
+                    Ce tableau de bord graphique a offert une <strong>vue claire et instantanée</strong> de la
+                    couverture
+                    LAPS sur
+                    l’ensemble de l’infrastructure, facilitant ainsi la prise de décision et le suivi du projet.
+                </p>
+            </section>
+            <section class="section" id="bilan-personnel">
+                <h2>Mon bilan personnel</h2>
+                <p>
+                    Ce projet m’a permis de renforcer mes compétences en <strong>PowerShell</strong> et en
+                    <strong>administration
+                        Active Directory</strong>, tout en découvrant l’importance de l’automatisation dans la gestion
+                    des
+                    infrastructures IT.
+                    La création du rapport Power BI m’a également initié à la <strong>data visualisation</strong>,
+                    un
+                    aspect
+                    crucial pour communiquer efficacement les résultats techniques aux équipes non techniques.
+                </p>
+                <p>
+                    En combinant ces outils, j’ai pu livrer une solution complète, de l’audit technique à la
+                    présentation
+                    visuelle,
+                    répondant parfaitement aux besoins de suivi du déploiement de LAPS.
+                </p>
+            </section>
+            <section class="section" id="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    Grâce à ce script PowerShell couplé à Power BI, le déploiement de Windows LAPS a pu être
+                    <strong>audité, suivi et validé</strong> efficacement.
+                    Ce projet m’a permis de renforcer mes compétences en <strong>automatisation</strong>, en
+                    <strong>administration Active Directory</strong>
+                    ainsi qu’en <strong>data visualisation</strong>.
+                    Il illustre parfaitement l’importance de lier des outils techniques (PowerShell) avec des
+                    solutions
+                    analytiques
+                    (Power BI) pour obtenir une <em>vision globale, claire et exploitable</em>.
+                </p>
+
+                <div style="text-align:center; margin:20px 0;">
+                    <img src="../images/Laps_report_P_BI.png" alt="Dashboard Power BI - suivi déploiement LAPS"
+                        width="80%">
+                    <p><em>Exemple de rapport Power BI affichant le suivi du déploiement de LAPS</em></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 – Mathis Vassy – Blog de Stage</p>
+    </footer>
+</body>
+
+</html>

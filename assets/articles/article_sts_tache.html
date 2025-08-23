@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Déploiement de Windows LAPS – Mon Blog de Stage</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mon Blog</h1>
+        <nav>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../about.html">À propos</a>
+            <a href="../../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <nav class="table-of-contents">
+        <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#supervision-imprimantes">2. Supervision des imprimantes avec Centreon</a></li>
+            <li><a href="#tests-wifi">3. Observation des tests de couverture Wi-Fi</a></li>
+            <li><a href="#conclusion">4. Conclusion</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <!-- Colonne principale -->
+        <div class="container">
+
+            <h1>Supervision des imprimantes et observation des tests de couverture Wi-Fi</h1>
+            <section class="section" id="introduction">
+                <h2>1. Introduction</h2>
+                <p>Au cours de mon stage chez STS Composite, j’ai eu l’opportunité de participer à plusieurs missions
+                    liées à la
+                    supervision et à l’optimisation des infrastructures IT. Parmi celles-ci, deux interventions
+                    ponctuelles se sont révélées particulièrement intéressantes : l’intégration d’imprimantes dans
+                    l’outil de supervision <strong>Centreon</strong> et l’observation d’une campagne de tests de
+                    couverture Wi-Fi dans l’usine. Ces activités m’ont permis de mieux comprendre l’importance de la
+                    surveillance proactive et de la fiabilité du réseau dans un environnement industriel.</p>
+            </section>
+
+            <section class="section" id="supervision-imprimantes">
+                <h2 id="supervision-imprimantes">2. Supervision des imprimantes avec Centreon</h2>
+                <p>La première mission a consisté à intégrer certaines imprimantes réseau dans
+                    <strong>Centreon</strong>, un logiciel de supervision déjà utilisé par l’entreprise pour ses
+                    serveurs et équipements critiques. L’objectif était d’étendre la surveillance aux périphériques
+                    d’impression afin d’anticiper les incidents et de limiter les interruptions de service.
+                </p>
+
+
+                <h3>2.1. Contexte</h3>
+                <p>Dans un site industriel, les imprimantes jouent un rôle essentiel, notamment pour la logistique (bons
+                    de commande, étiquettes de production, bons de livraison, etc.). Une panne d’imprimante peut
+                    ralentir ou bloquer certaines étapes de la chaîne de production. Jusqu’alors, les équipes techniques
+                    devaient souvent attendre un appel d’utilisateur avant d’intervenir. L’intégration des imprimantes
+                    dans Centreon visait donc à <strong>passer d’une gestion réactive à une gestion proactive</strong>.
+                </p>
+
+                <h3>2.2. Intégration dans Centreon</h3>
+                <p>J’ai participé à la configuration en :</p>
+                <ul>
+                    <li>identifiant les imprimantes réseau à surveiller et en relevant leurs adresses IP,</li>
+                    <li>ajouter les imprimante au réseau du site correspondant et définir à quel niveau du toner les
+                        alertes se apparaissaient,</li>
+                    <li>suivi des alertes sur Centreon.</li>
+                </ul>
+
+                <h3>2.3. Résultats et bénéfices</h3>
+                <p>Grâce à cette supervision, les équipes IT peuvent désormais être alertées en temps réel avant même
+                    que les utilisateurs ne soient impactés. Cela permet :</p>
+                <ul>
+                    <li>d’anticiper les pannes et de préparer un remplacement de consommables à l’avance,</li>
+                    <li>d’éviter les blocages liés aux files d’impression saturées,</li>
+                    <li>d’avoir une vision centralisée de l’état du parc d’imprimantes.</li>
+                </ul>
+                <p>Ce travail m’a permis de mieux comprendre l’importance
+                    d’un outil de monitoring dans la gestion quotidienne d’un parc informatique.</p>
+
+            </section>
+
+            <section class="section" id="tests-wifi">
+                <h2 id="tests-wifi">3. Observation des tests de couverture Wi-Fi</h2>
+                <p>La deuxième mission consistait à observer une campagne de tests visant à mesurer et cartographier la
+                    couverture Wi-Fi dans l’usine. L’objectif était de repérer les zones où le signal était faible ou
+                    instable afin d’optimiser la connectivité des terminaux utilisés par les opérateurs.</p>
+
+                <h3>3.1. Méthodologie</h3>
+                <p>Le test reposait sur l’utilisation d’un <strong>pistolet scanner</strong>, un appareil habituellement
+                    utilisé pour lire les codes-barres. Cet appareil était connecté au Wi-Fi et couplé à un logiciel
+                    capable de réaliser des relevés de signal. Le processus était le suivant :</p>
+                <ul>
+                    <li>l’opérateur se déplaçait dans différents ateliers et entrepôts,</li>
+                    <li>à intervalles réguliers, il marquait un point sur un plan numérique,</li>
+                    <li>à chaque point, une mesure de la puissance du signal et de la qualité de connexion était
+                        enregistrée,</li>
+                    <li>les données collectées servaient ensuite à générer une <strong>cartographie complète de la
+                            couverture Wi-Fi</strong>.</li>
+                </ul>
+
+                <h3>3.2. Analyse et constats</h3>
+                <p>Les résultats ont mis en évidence plusieurs points :</p>
+                <ul>
+                    <li>certaines zones proches des bureaux bénéficiaient d’un signal excellent,</li>
+                    <li>dans certains ateliers plus éloignés, le signal était instable voire inexistant,</li>
+                    <li>les obstacles physiques (murs épais, machines industrielles, structures métalliques) avaient un
+                        impact direct sur la qualité de réception.</li>
+                </ul>
+
+                <h3>3.3. Importance de la couverture Wi-Fi</h3>
+                <p>Dans une usine moderne, de nombreux outils (pistolets scanners, tablettes, terminaux mobiles)
+                    reposent sur le Wi-Fi pour fonctionner correctement. Une mauvaise couverture peut entraîner des
+                    pertes de temps, des erreurs de suivi logistique, ou encore des ralentissements dans la production.
+                    Ces tests sont donc essentiels pour planifier l’ajout de nouveaux points d’accès ou pour optimiser
+                    l’emplacement de ceux déjà installés.</p>
+                <p>Exemple de schéma de wifi (pas de l'entreprise)</p>
+                <img src="../images/wifi.png" alt="Plan_WiFi"
+                    style="display: block; margin: 20px auto; max-width: 80%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
+                <p>Cette expérience m’a permis de comprendre les enjeux liés à la connectivité dans un environnement
+                    industriel et l’importance d’une bonne planification pour garantir une couverture Wi-Fi optimale.
+                </p>
+            </section>
+            <section class="section" id="conclusion">
+                <h2 id="conclusion">4. Conclusion</h2>
+                <p>Ces deux missions m’ont permis de découvrir deux aspects complémentaires de l’administration système
+                    et réseau :</p>
+                <ul>
+                    <li>la <strong>supervision proactive</strong> avec Centreon, qui garantit la disponibilité et la
+                        continuité des services,</li>
+                    <li>l’<strong>optimisation du réseau Wi-Fi</strong>, indispensable dans un environnement industriel
+                        connecté.</li>
+                </ul>
+                <p>Au-delà des aspects techniques, elles m’ont sensibilisé à la nécessité d’une vision globale : la
+                    supervision assure la réactivité des équipes IT, tandis que la cartographie Wi-Fi permet d’anticiper
+                    les besoins futurs. Ces expériences, bien que ponctuelles, ont enrichi mon stage et renforcé mon
+                    intérêt pour les métiers liés aux infrastructures IT.</p>
+            </section>
+
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 – Mathis Vassy – Blog de Stage</p>
+    </footer>
+
+</body>
+
+</html>
